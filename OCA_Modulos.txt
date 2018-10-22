@@ -157,11 +157,14 @@ try:
 except (ImportError, IOError) as err:
     _logger.debug(err)
 
-Esta regla no se aplica a los archivos de prueba, ya que estos archivos se cargan solo cuando se ejecutan pruebas y, en tal caso, se instalan su módulo y sus dependencias externas.
+Esta regla no se aplica a los archivos de prueba, ya que estos archivos se cargan solo cuando se ejecutan 
+pruebas y, en tal caso, se instalan su módulo y sus dependencias externas.
 
 README
-si tu modulos utiliza dependencia extra de python o binario , por favor explica como instalarlo en el README.rst
+si tu modulos utiliza dependencia extra de python o binario , por favor explica como 
+instalarlo en el README.rst
 
-También debe definir los paquetes de python para instalar en un archivo Requirements.txt en la carpeta raíz del repositorio.
+También debe definir los paquetes de python para instalar en un archivo Requirements.txt
+en la carpeta raíz del repositorio.
 
 ########################################################################################################
