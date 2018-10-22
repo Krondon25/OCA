@@ -19,17 +19,17 @@ seguido de los de OCA crm_partner_firstname
 
 6) cambia el __openerp__.py por /__manifest__.py dentro de ella
 
-	* Evitar llaves vacias
-	* Asegurase de tener las claves de las licencia y las imagenes
-	* Asegurese de que  Odoo Community Association (OCA) se agrege en el autor
-	* La clave del sitio web(website) debe ser https://github.com/OCA/ <repo>,
-    a fin de proporcionar el enlace más relevante para descubrir más 
-    información sobre el complemento. Ese enlace muestra el repositorio README.
-    Alternativamente, se puede usar https://github.com/OCA/<repo>/tree/
-    <branch>/<addon>, para proporcionar un enlace directo al README 
-    del complemento, que incluye los créditos correspondientes (autores,
-    colaboradores y sus empresas), y enlaces a la información relevante 
-    en el sitio web de OCA.
+* Evitar llaves vacias
+* Asegurase de tener las claves de las licencia y las imagenes
+* Asegurese de que  Odoo Community Association (OCA) se agrege en el autor
+* La clave del sitio web(website) debe ser https://github.com/OCA/ <repo>,
+a fin de proporcionar el enlace más relevante para descubrir más 
+información sobre el complemento. Ese enlace muestra el repositorio README.
+Alternativamente, se puede usar https://github.com/OCA/<repo>/tree/
+<branch>/<addon>, para proporcionar un enlace directo al README 
+del complemento, que incluye los créditos correspondientes (autores,
+colaboradores y sus empresas), y enlaces a la información relevante 
+en el sitio web de OCA.
 
 7) No uses el logo de tu compania ni marca de tu empresa, usa el autor y la 
 lista de contribuidores es suficiente para que las personas conosca tu trabajo 
