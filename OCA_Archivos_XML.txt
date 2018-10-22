@@ -1,0 +1,50 @@
+OCA Odoo
+###############################################################################
+################### Archivos XML: #############################################
+
+
+###############################################################################
+################### Formato ###################################################
+
+Cuando declaras un archivo XML
+
+* El ID Va antes que el MODEL
+
+* Para la declaracion de Campos(Field) el NAME es el primer atributo Luego,
+coloque el value en la etiqueta de campo(Field), en el atributo eval,
+y finalmente en otros atributos (widget, opciones, ...) ordenados por 
+importancia.
+
+* Trata de agrupar los registros por el modelo, en caso de dependencia
+entre action/menu/views, la convencion no podria ser aplicable.
+
+* la etiqueta <data> solo se utiliza para configurar datos no actualizables
+con noupdate=1 es decir los datos no se actualizan noupdate=0
+
+* No prefijar el ID XML con el nombre del modelo 
+
+###############################################################################
+
+################### Registros #################################################
+
+Para los registros del modelo ir.filters usa explicitamente el campo user_id
+
+<record id="filter_id" model="ir.filters">
+    <field name="name">Filter name</field>
+    <field name="model_id">filter.model</field>
+    <field name="user_id" eval="False"/>
+</record>
+
+###############################################################################
+################## Vistas #####################################################
+
+para la v8 es recomendado evitar usar el atributo "string" de una vista <tree>
+el cual se encuentra obsoleto
+
+para la v9 es recomendado evitar usar los atrubutos "color" y "fonts" en una 
+vista <tree> la cual ha sido descartada en favor de "decoration-{$name}"
+
+##############################################################################
+################# Nombrando los xml_id #######################################
+
+registro de datos 
