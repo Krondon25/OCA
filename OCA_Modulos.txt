@@ -1,6 +1,6 @@
 OCA Odoo
-#######################################################################################################
-########################################### MODULOS: ##################################################
+###############################################################################
+################### MODULOS: ##################################################
 
 1) Usar El nombre de los modulos en singular excepto cuando está compuesto 
 del nombre de módulo u objeto Odoo que ya está en plural
@@ -8,85 +8,92 @@ del nombre de módulo u objeto Odoo que ya está en plural
 2) Si el proposito de tus modulos es servir como base para otros modulos
 usa el prefijo base_nombre
 
-3) cuando creas un modulo de localizacion debes usar el prefijo l10n_cc_nombre donde cc
-es el codigo de la ciudad 
+3) cuando creas un modulo de localizacion debes usar el prefijo l10n_cc_nombre
+donde cc es el codigo de la ciudad 
 
-4) cuando extiendes un modulo en odoo usa de prefijo el nombre del modulo base seguido del nombre
-de tu modulo mail_faster
+4) cuando extiendes un modulo en odoo usa de prefijo el nombre del modulo base
+seguido del nombre de tu modulo mail_faster
 
-5) cuando combines modulos de odoo con OCA primero van los modulos de odoo seguido de los de OCA
-crm_partner_firstname
+5) cuando combines modulos de odoo con OCA primero van los modulos de odoo 
+seguido de los de OCA crm_partner_firstname
 
-6) cambia el __openerp__.py por /__manifest__.py dentro de ella 
-	Evitar llaves vacias
-	Asegurase de tener las claves de las licencia y las imagenes
-	asegurese de que  Odoo Community Association (OCA) se agrege en el autor
-	La clave del sitio web(website) debe ser https://github.com/OCA/ <repo>, a fin de proporcionar 
-	el enlace más relevante para descubrir más información sobre el complemento. Ese enlace muestra 
-	el repositorio README. Alternativamente, se puede usar 
-	https://github.com/OCA/<repo>/tree/<branch>/ <addon>, para proporcionar un enlace directo al 
-	README del complemento, que incluye los créditos correspondientes (autores, colaboradores y 
-	sus empresas) , y enlaces a la información relevante en el sitio web de OCA.
+6) cambia el __openerp__.py por /__manifest__.py dentro de ella
 
-7) no uses el logo de tu compania ni marca de tu empresa, usa el autor y la lista de contribuidores 
-es suficiente para que las personas conosca tu trabajo 
+	* Evitar llaves vacias
+	* Asegurase de tener las claves de las licencia y las imagenes
+	* Asegurese de que  Odoo Community Association (OCA) se agrege en el autor
+	* La clave del sitio web(website) debe ser https://github.com/OCA/ <repo>,
+    a fin de proporcionar el enlace más relevante para descubrir más 
+    información sobre el complemento. Ese enlace muestra el repositorio README.
+    Alternativamente, se puede usar https://github.com/OCA/<repo>/tree/
+    <branch>/<addon>, para proporcionar un enlace directo al README 
+    del complemento, que incluye los créditos correspondientes (autores,
+    colaboradores y sus empresas), y enlaces a la información relevante 
+    en el sitio web de OCA.
 
-
-#######################################################################################################
-
-############################################## Numero de version ######################################
-
-la version en el modulo manifest deberia ser mayor a la 8.0 seguido por el modulo x.y.z
-por ejemplo 8.0.1.0.0 es la primera release del modulo
-la x.y.z son numeros de versiones de la siguiente semantica breaking.feature.fix:
-
-(X) Incrementa cuando el modelo de datos o las vistas cambian significativamente
-la migracion de datos puede ser necesaria o los modulos dependiente pueden verse afectado
-
-(Y) Incrementa cuando se agregan nuevas caracteristica que no rompe la estructura
-y probablemente sea necesario actualizar el modulo
-
-(Z) Incrementa cuando se hicieron correcciones de errores
-
-Si corresponde, se espera que los cambios de última hora incluyan instrucciones o scripts 
-
-para realizar la migración en las instalaciones actuales.
-
-#######################################################################################################
-
-########################################## Migracion ##################################################
-
-Cuando introduce un cambio de ruptura, debe proporcionar un script de migración para que sea posible 
-actualizar  desde versiones inferiores. Para una migración a otra versión importante de Odoo, 
-es muy probable que también necesite un script de migración. En tales casos, los scripts de 
-migración son muy apreciados, pero una nota en README sobre los cambios relevantes que requieren 
-migración también es suficiente para que los contribuyentes posteriores puedan agregar scripts 
-de migración sin tener que analizar todos los cambios nuevamente.
+7) No uses el logo de tu compania ni marca de tu empresa, usa el autor y la 
+lista de contribuidores es suficiente para que las personas conosca tu trabajo 
 
 
-#######################################################################################################
+###############################################################################
 
-########################################## Directorios ################################################
+###################### Numero de version ######################################
 
-controllers: contienen los controladores (http routes)
-data: contiene datos  xml
-demo: modelo de demostracion xml
-examples: Archivos externos lib/, ...
-models: definicion de modelos
-report: modelos de reportes (BI/analysis), Webkit/RML imprime las plantillas del reporte
-static: contiene los activos web, separados dentro css/, js/, img/,
-templates: Si tiene varias plantillas web y varias vistas de backend, puede dividirlas aquí
-views: Contiene las vistas y los plantillas, y las plantillas de los resportes QWeb
-wizards: contines los wizards y las vistas
+la version en el modulo manifest deberia ser mayor a la 8.0 seguido por el 
+modulo x.y.z por ejemplo 8.0.1.0.0 es la primera release del modulola x.y.z son
+numeros de versiones de la siguiente semantica breaking.feature.fix:
+
+* (X) Incrementa cuando el modelo de datos o las vistas cambian 
+significativamente la migracion de datos puede ser necesaria o los modulos 
+dependiente pueden verse afectado
+
+* (Y) Incrementa cuando se agregan nuevas caracteristica que no rompe la
+estructura y probablemente sea necesario actualizar el modulo
+
+* (Z) Incrementa cuando se hicieron correcciones de errores
+
+Si corresponde, se espera que los cambios de última hora incluyan 
+instrucciones o scripts para realizar la migración en las instalaciones 
+actuales.
+
+###############################################################################
+##################### Migracion ###############################################
+
+Cuando introduce un cambio de ruptura, debe proporcionar un script de migración
+para que sea posible actualizar desde versiones inferiores. 
+Para una migración a otra versión importante de Odoo, es muy probable que
+también necesite un script de migración. En tales casos, los scripts de 
+migración son muy apreciados, pero una nota en README sobre los cambios
+relevantes que requieren migración también es suficiente para que los 
+contribuyentes posteriores puedan agregar scripts de migración sin tener que
+analizar todos los cambios nuevamente.
+
+
+###############################################################################
+
+#################### Directorios ##############################################
+
+* controllers: contienen los controladores (http routes)
+* data: Contiene datos  xml
+* demo: Modelo de demostracion xml
+* examples: Archivos externos lib/, ...
+* models: Definicion de modelos
+* report: Modelos de reportes, donde se encuentra las plantillas del reporte
+* static: Contiene los activos web, separados dentro css/, js/, img/,
+* templates: Si tiene varias plantillas web y varias vistas de backend, 
+  puede dividirlas aquí
+* views: Contiene las vistas y las plantillas de los resportes QWeb
+* wizards: Contines los wizards y las vistas
  
-########################################################################################################
-######################################### Nombre de Archivos ###########################################
+###############################################################################
+################### Nombre de Archivos ########################################
 
-Para los modelos(model), vista(views) y datos(data) son separadas con un underscor con el modelo
-involucrado ya sea creando o heredando, estos archivos deben tener el nombre del modelo por ejemplo una 
-vista res.partner debe ser llamada views/res_partner.xml, 
-una excepcion puede ser cuando el modelo es solo utilizado para hacer un a relacion one2many en este caso
-tu puedes incluir el modelo de definicion de afuera
+Para los modelos(model), vista(views) y datos(data) son separadas 
+con un underscor con el modelo involucrado ya sea creando o heredando, estos 
+archivos deben tener el nombre del modelo por ejemplo una vista res.partner 
+debe ser llamada views/res_partner.xml, una excepcion puede ser cuando 
+el modelo es solo utilizado para hacer un a relacion one2many en este caso tu
+puedes incluir el modelo de definicion de afuera
 
 ejemplo:
 
@@ -101,19 +108,21 @@ demo/<main_model>.xml
 templates/<main_model>.xml
 views/<main_model>.xml
 
-para el <controllers> si hay solo un archivo que se puede llamar main.py y son varios controladores,
-clases funciones tu puedes dividirlos en diferentes archivos
+para el <controllers> si hay solo un archivo que se puede llamar main.py 
+y son varios controladores, clases funciones tu puedes dividirlos en 
+diferentes archivos
 
-Para los archivos <static> el patrón de nombre es <nombre_módulo> static/js/im_chat.js No vincule datos 
-(imágenes, bibliotecas) fuera de Odoo: no use una URL para una imagen,
-sino que cópiela en nuestro código base.
+Para los archivos <static> el patrón de nombre es <nombre_módulo> 
+static/js/im_chat.js No vincule datos (imágenes, bibliotecas) fuera de Odoo
+no use una URL para una imagen, sino que cópiela en nuestro código base.
 
-#########################################################################################################
+###############################################################################
 
-########################################## Instalacion de  Hooks ########################################
+###################### Instalacion de  Hooks ##################################
 
-cuado pre_init_hook, post_init_hook, uninstall_hook y post_load sean usados deberian colocar se en 
-hooks.py localizado en la raiz del directorio y las llaves en el manifiesto deberian colocar se 
+cuado pre_init_hook, post_init_hook, uninstall_hook y post_load sean usados,
+deberian colocar se en hooks.py localizado en la raiz del directorio,
+las llaves en el manifiesto deberian colocar se de este modo 
 
 {
     ...
@@ -124,11 +133,12 @@ hooks.py localizado en la raiz del directorio y las llaves en el manifiesto debe
     ...
 }
 
-#########################################################################################################
-######################################### Dependencia Externas ##########################################
+###############################################################################
+##################### Dependencia Externas ####################################
 
-Si tu modulo tiene dependencia externa ya sea de python o binarios se debe agregar en el manifest la
-clave external_dependencies y sus respectivo valores x ejemplo
+Si tu modulo tiene dependencia externa ya sea de python o binarios se debe
+agregar en el manifest la clave external_dependencies y sus respectivo valores
+por ejemplo:
 
 'external_dependencies': {
         'bin': [
@@ -152,19 +162,20 @@ en estas dependencia se debe manejar los errores con el try except
 try:
     import external_dependency_python_N
     import external_dependency_python_M
-    EXTERNAL_DEPENDENCY_BINARY_N_PATH = tools.find_in_path('external_dependency_binary_N')
-    EXTERNAL_DEPENDENCY_BINARY_M_PATH = tools.find_in_path('external_dependency_binary_M')
+    EXTERNAL_DEPENDENCY_BINARY = tools.find_in_path('external_dependency')
+    EXTERNAL_DEPENDENCY_BINARY = tools.find_in_path('external_dependency')
 except (ImportError, IOError) as err:
     _logger.debug(err)
 
-Esta regla no se aplica a los archivos de prueba, ya que estos archivos se cargan solo cuando se ejecutan 
-pruebas y, en tal caso, se instalan su módulo y sus dependencias externas.
+Esta regla no se aplica a los archivos de prueba, ya que estos archivos se
+cargan solo cuando se ejecutan pruebas y, en tal caso, se instalan su módulo
+y sus dependencias externas.
 
 README
-si tu modulos utiliza dependencia extra de python o binario , por favor explica como 
-instalarlo en el README.rst
+si tu modulos utiliza dependencia extra de python o binario, por favor 
+explica como instalarlo en el README.rst
 
-También debe definir los paquetes de python para instalar en un archivo Requirements.txt
-en la carpeta raíz del repositorio.
+También debe definir los paquetes de python para instalar en un archivo 
+Requirements.txt en la carpeta raíz del repositorio.
 
-########################################################################################################
+###############################################################################
